@@ -1,51 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    border: 1px solid red;
+
 }
 
-#principal{
+#principal {
     width: 1120px;
     margin: 0 auto;
     display: flex;
     gap: 28px;
-    & #foto{
+
+    & #foto {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background-color: red;
-        
+        background-color: #d6d638;
+
     }
-    & main{
+
+    & main {
         flex: 1;
-         & #topo{
+
+        & #topo {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            & div{
-                & h1{
+            margin-bottom: 46px;
+
+            & div {
+                & h1 {
                     font-size: 36px;
                 }
-                &h6{
+
+                & h6 {
                     font-size: 20px;
                 }
-            }
-            & ul{
-                display: flex;
-                gap: 16px;
-                &li{
-                    
-                    & a{
 
+                & nav {
+                    margin-top: 16px;
+
+                    & a {
+                        display: block;
+                        color: #727171;
+                        padding-bottom: 4px;
+                        position: relative;
+                        transition-duration: 300ms;
+
+                        &:hover {
+                            color: #d6d638;
+
+                            &::after {
+                                opacity: 1;
+                                width: 20px;
+                                left: calc(50% - 10px);
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 0px;
+                            height: 4px;
+                            border-radius: 2px;
+                            background-color: #d6d638;
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            opacity: 0;
+                            transition-duration: 300ms;
+                        }
                     }
                 }
-
             }
-         }
+
+            & ul {
+                display: flex;
+                gap: 16px;
+
+                &li {
+
+                    & a {}
+                }
+            }
+        }
+    }
+
+    & #sobre {
+        & h2 {
+            font-size: 48px;
+            margin-bottom: 26px;
+        }
+
+        & p {
+            margin-bottom: 16px;
+            font-size: 18px;
+            width: 700px;
+        }
+
+        & #linguagens {
+            margin-top: 100px;
+
+            & ul {
+                display: flex;
+                gap: 16px;
+
+                & li {
+                    flex: 1;
+                    height: 100px;
+                    background-color: red;
+                }
+            }
+        }
     }
 }
